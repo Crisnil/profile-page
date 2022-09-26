@@ -23,9 +23,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: yarn install
-      - run: yarn build
-      - run: npm run export
+        run: yarn install
+        run: yarn build
+        run: npm run export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
       - name: Deploy
